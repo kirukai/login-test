@@ -14,9 +14,9 @@ def screen():
 		call_the_list()
 
 def login():
-	p6 = input("Enter username: ")
-	p7 = input("Enter password: ")
-	if p6 and p7 in user:
+	username = input("Enter username: ")
+	password = input("Enter password: ")
+	if username and password in user:
 		print("Congratulations in logging in...")
 		screen()
 	else:
@@ -24,9 +24,9 @@ def login():
 		screen()
 
 def register():
-	p3 = user.append(input("Enter username: "))
-	p4 = user.append(input("Enter password: "))
-	if p3 and p4 in user:
+	username = user.append(input("Enter username: "))
+	password = user.append(input("Enter password: "))
+	if username and password in user:
 		print("The given input is IN the database")
 		register()
 	else:
