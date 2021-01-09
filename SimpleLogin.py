@@ -1,13 +1,13 @@
 user = ()
 
-def main():
+def screen():
 	prompt = input("Are you registered? Y/N\n")
 	if prompt == 'n':
 		prompt2 = input("Do you want to make an account? Y/N\n")
 		if prompt2 == 'y':
 			register()
 		elif prompt2 == 'n':
-			main()
+			screen()
 	elif prompt == 'y':
 		login()
 	elif prompt == 'm':
@@ -18,10 +18,10 @@ def login():
 	p7 = input("Enter password: ")
 	if p6 and p7 in user:
 		print("Congratulations in logging in...")
-		main()
+		screen()
 	else:
 		print("Are you sure you are registered?")
-		main()
+		screen()
 
 def register():
 	p3 = user.append(input("Enter username: "))
@@ -31,9 +31,9 @@ def register():
 		register()
 	else:
 		print("Creation of account is successful")
-		main()
+		screen()
 
 def call_the_list():
 	print(user)
 
-main()
+screen()
